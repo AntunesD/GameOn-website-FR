@@ -188,6 +188,26 @@ main {
 
 /* Modal form */
 
+.error-message {
+  color: #fe142f;
+  font-size: 16px;
+}
+
+.modal-success {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  z-index: 1;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
 .button {
   background: #fe142f;
   margin-top: 0.5em;
