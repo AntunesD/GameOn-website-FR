@@ -16,7 +16,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -84,16 +83,6 @@ img {
   color: #ff0000;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
 
 @media screen and (max-width: 768px) {
 
@@ -195,18 +184,10 @@ main {
 
 .modal-success {
   display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: green;
-  z-index: 1;
-  width: 300px;
-  padding: 20px;
-  border-radius: 5px;
   text-align: center;
 
 }
+
 
 .button {
   background: #fe142f;
@@ -216,6 +197,13 @@ main {
   border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
+}
+
+.fermer {
+  border: none;
+  position: absolute;
+  bottom: 0 ;
+  transform: translateX(-50%) translateY(-50%) ;
 }
 
 .button:hover {
@@ -239,6 +227,8 @@ main {
 }
 
 .content {
+  position: relative;
+  min-height: 90%;
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
@@ -255,6 +245,13 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+}
+
+.modal-success p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) ;
+
 }
 
 label {
@@ -645,5 +642,28 @@ footer {
 
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .content {
+    margin: 0;
+    max-width: 100%;
+    top: 80px;
+  }
+
+  .bground {
+    background : none;
+    min-height: 657px;
   }
 }
